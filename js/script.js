@@ -1,4 +1,13 @@
-let computerMove = `kamień`;
-let playerMove = 'papier';
+let randomNumber = Math.floor(Math.random() * 3 + 1);
 
-printMessage('Zagrałem ' + computerMove + '! Jeśli Twój ruch to ' + playerMove + ', to wygrywasz!');
+console.log('Radnom number: ' + randomNumber);
+
+let computerMove = 'Unknown move';
+
+if (randomNumber == 1) {
+    computerMove = 'rock';
+} else if (randomNumber == 2) {
+    computerMove = 'paper';
+} else if (randomNumber == 3) {
+    computerMove = 'scissors';
+}
