@@ -47,6 +47,7 @@ function playGame(argPlayerInput) {
             winner = 'Player';
         } else if (argPlayerMove == 'paper' && argComputerMove == 'scissors') {
             printMessage('You lose!');
+            winner = 'Opponent';
         } else if (argPlayerMove == 'Unkown move') {
             printMessage('Unkown move! Please select availiable moves (1 , 2 , 3 )');
         }
@@ -71,7 +72,7 @@ function playGame(argPlayerInput) {
         resultOpponent++;
     }
 
-    printMessage(resultPlayer + ' - ' + resultOpponent);
+    printResult(resultPlayer + ' - ' + resultOpponent);
 }
 
 document.getElementById('play-rock').addEventListener('click', function(){
