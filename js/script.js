@@ -1,5 +1,9 @@
+let resultPlayer = 0;
+let resultOpponent = 0;
+
 function playGame(argPlayerInput) {
     clearMessages();
+    let winner = 'n/a';
 
     let playerInput = argPlayerInput;
 
@@ -28,14 +32,19 @@ function playGame(argPlayerInput) {
             printMessage('Draw!');
         } else if (argPlayerMove == 'rock' && argComputerMove == 'scissors') {
             printMessage('You win!');
+            winner = 'Player';
         } else if (argPlayerMove == 'rock' && argComputerMove == 'paper') {
             printMessage('You lose!');
+            winner = 'Opponent';
         } else if (argPlayerMove == 'scissors' && argComputerMove == 'paper') {
             printMessage('You win!');
+            winner = 'Player';
         } else if (argPlayerMove == 'scissors' && argComputerMove == 'rock') {
             printMessage('You lose!');
+            winner = 'Opponent';
         } else if (argPlayerMove == 'paper' && argComputerMove == 'rock') {
             printMessage('You win!');
+            winner = 'Player';
         } else if (argPlayerMove == 'paper' && argComputerMove == 'scissors') {
             printMessage('You lose!');
         } else if (argPlayerMove == 'Unkown move') {
@@ -55,6 +64,14 @@ function playGame(argPlayerInput) {
 
     displayResult(computerMove, playerMove);
     printMessage('You played: ' + playerMove + '! Opponent played: ' + computerMove + '!');
+
+    if ( winner == 'Player' ) {
+        resultPlayer++;
+    }   else if ( winner == 'Opponent') {
+        resultOpponent++;
+    }
+
+    printMessage(resultPlayer + ' - ' + resultOpponent);
 }
 
 document.getElementById('play-rock').addEventListener('click', function(){

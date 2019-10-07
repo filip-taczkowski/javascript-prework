@@ -1,0 +1,73 @@
+/* Variables */
+/* Global */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #384E77;
+  font-family: "PT Sans", sans-serif;
+  color: #E6F9AF;
+  margin: 0;
+}
+
+.container {
+  width: 1000px;
+  margin: 0 auto;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.fas {
+  background: #8BBEB2;
+  height: 150px;
+  width: 150px;
+  font-size: 80px;
+  border-radius: 50%;
+}
+
+/* Header */
+header {
+  width: 1000px;
+  margin: 0 auto;
+  padding: 20px 0;
+  text-align: center;
+  background-color: #0D0630;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  color: #E6F9AF;
+}
+
+header .header-box {
+  width: 33.3333%;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column-reverse;
+      flex-direction: column-reverse;
+  -ms-flex-align: center;
+      align-items: center;
+}
+
+header .header-box button {
+  border-radius: 50%;
+  background: none;
+  border: none;
+  color: #E6F9AF;
+  cursor: pointer;
+}
+
+header .header-box .fas {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-align: center;
+      align-items: center;
+}
+
+header h2 {
+  width: 100%;
+}
+/*# sourceMappingURL=style.css.map */
