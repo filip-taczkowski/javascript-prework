@@ -86,3 +86,10 @@ document.getElementById('play-paper').addEventListener('click', function(){
 document.getElementById('play-scissors').addEventListener('click', function(){
     playGame(3)
 })
+
+document.getElementById('reset-result').addEventListener('click', function(){
+    clearMessages();
+    resultOpponent = 0;
+    resultPlayer = 0;
+    printResult(resultPlayer + ' - ' + resultOpponent);
+})

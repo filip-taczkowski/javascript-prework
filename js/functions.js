@@ -15,3 +15,4 @@ function clearMessages(){
 	document.getElementById('messages').innerHTML = '';
 	document.getElementById('result').innerHTML = '';
 }
+
