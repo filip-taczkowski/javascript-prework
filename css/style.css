@@ -1,7 +1,8 @@
 /* Variables */
 /* Global */
 *, *::before, *::after {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 body {
@@ -15,10 +16,24 @@ body {
   width: 1000px;
   margin: 0 auto;
   text-align: center;
-  margin-top: 20px;
+  padding-top: 20px;
+  height: 300px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-.fas {
+.header-icon {
   background: #8BBEB2;
   height: 150px;
   width: 150px;
@@ -33,6 +48,7 @@ header {
   padding: 20px 0;
   text-align: center;
   background-color: #0D0630;
+  display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
@@ -42,12 +58,16 @@ header {
 
 header .header-box {
   width: 33.3333%;
+  display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-direction: column-reverse;
-      flex-direction: column-reverse;
-  -ms-flex-align: center;
-      align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: column-reverse;
+          flex-direction: column-reverse;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 header .header-box button {
@@ -56,15 +76,26 @@ header .header-box button {
   border: none;
   color: #E6F9AF;
   cursor: pointer;
+  -webkit-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
+}
+
+header .header-box button:focus {
+  -webkit-transform: rotate(360deg) scale(0.7);
+          transform: rotate(360deg) scale(0.7);
+  outline: none;
 }
 
 header .header-box .fas {
+  display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: center;
-      justify-content: center;
-  -ms-flex-align: center;
-      align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 header h2 {
@@ -74,5 +105,19 @@ header h2 {
 /* Result */
 #result {
   font-size: 120px;
+}
+
+#reset-result {
+  width: 200px;
+  height: 50px;
+  background: #8BBEB2;
+  color: #E6F9AF;
+  border: none;
+  font-size: 24px;
+  border: 2px solid #8BBEB2;
+}
+
+#reset-result:active {
+  background: none;
 }
 /*# sourceMappingURL=style.css.map */
